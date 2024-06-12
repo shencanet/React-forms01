@@ -1,34 +1,41 @@
 const NoControlado = () => {
     return(
 
-        <form>
-            <input type="text" 
-             id="nombre" 
-             placeholder="introduce el texto"
-             className="form-control mb-2"/>
-
-             <textarea className="form-control mb-2" 
-             placeholder="Introduce descripcion"/>
-             <select>
-                <option value="1">Enero</option>
-                <option value="2">Febrero</option>
-                <option value="3">Marzo</option>
-                <option value="4">Abril</option>
-                <option value="5">Mayo</option>
-                <option value="6">Junio</option>
-                <option value="7">Julio</option>
-                <option value="8">Agosto</option>
-                <option value="9">Septiembre</option>
-                <option value="10">Octubre</option>
-                <option value="11">Noviembre</option>
-                <option value="12">Diciembre</option>
-                
-             </select>
-
-        
-
-        
+        <div className="container mt-2">
+        <form
+          onSubmit={handleSubmit}
+          ref={formulario}
+        >
+          <input
+            className="form-control mb-2"
+            type="text"
+            placeholder="Ingrese un TODO"
+            name="todoNombre"
+            defaultValue="Tarea #01"
+          />
+          <textarea
+            className="form-control mb-2"
+            type="text"
+            placeholder="Ingrese un TODO"
+            name="todoDescripcion"
+            defaultValue="Descripción tarea #01"
+          />
+          <select
+            className="form-control mb-2"
+            name="todoEstado"
+            defaultValue="completado"
+          >
+            <option value="pendiente">Pendiente</option>
+            <option value="completado">Completado</option>
+          </select>
+          <button
+            className="btn btn-primary"
+            type="submit"
+          >
+            Agregar
+          </button>
         </form>
+      </div>
     );}
 
 
