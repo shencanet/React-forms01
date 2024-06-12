@@ -1,3 +1,5 @@
 const NoControlado = () => {
-    return('No controlado');}
+    return(' No controlado');}
+
+
     export default NoControlado;
